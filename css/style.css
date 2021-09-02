@@ -1,0 +1,24 @@
+* {
+  font-family: "Raleway", sans-serif;
+  margin-left: 5px;
+}
+
+h1 {
+  font-size: 5rem;
+  text-shadow: 5px 5px dodgerblue;
+  margin: 0;
+  font-weight: bolder;
+  text-align: center;
+  align-items: center;
+  background-color: darkblue;
+  color: whitesmoke;
+}
+
+.input-group {
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 0;
+  font-weight: bolder;
+  background-color: orange;
+}
