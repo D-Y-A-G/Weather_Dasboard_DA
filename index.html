@@ -24,39 +24,38 @@
   <!-- Need to add containers in body to display data requested - city current weather - 5 day forecast and searched city on left below search btn-->
   <body>
     <h1>Weather Dashboard</h1>
-    <div class="row col-4" class="searchBar">
-      <!-- Search bar with input -->
-      <h3>Search for a City:</h3>
-      <div class="col-12">
-        <input
-          type="text"
-          class="form-control"
-          placeholder="Search for City Here!"
-          aria-label="Search Bar"
-          id="cityInput"
-          
-        />
-        <button
-          class="col-12 btn btn-outline-primary"
-          type="button"
-          id="button-addon2"
-          class="searchbtn"
-        >
-          Search
-        </button>
-      </div>
-      <!-- Section to display current weather -->
-      <section class="col-12 col-md-9">
-        <h1 id="cityName"></h1>
-        <div class="row border " id="currentTemp"></div>
-        <div class="col-12" id="weatherDetails" class="list-group">
-          
+    <main>
+      <div class="row">
+        <!-- Search bar with input -->
+        <h3>Search for a City:</h3>
+        <div class="col-12 col-md-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search for City Here!"
+            aria-label="Search Bar"
+            id="cityInput"
+          />
+          <button
+            class="col-12 btn btn-outline-primary"
+            type="button"
+            id="button-addon2"
+            class="searchbtn"
+          >
+            Search
+          </button>
         </div>
-      </section>
-      <!-- Section to display searched cities -->
+        <!-- Section to display current weather -->
+        <section class="row col-12 col-md-9 border">
+          <h3 id=" row cityName">CityName Here</h3>
+          <div class="row col-12" id="currentTemp"></div>
+          <div class="row col-12" id="weatherDetails" class="list-group"></div>
+        </section>
+        <!-- Section to display searched cities -->
 
-      <!-- Section to display 5 day forecast -->
-    </div>
+        <!-- Section to display 5 day forecast -->
+      </div>
+    </main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
@@ -68,6 +67,7 @@
       integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
       crossorigin="anonymous"
     ></script>
+    
     <script src="js/script.js"></script>
   </body>
 </html>

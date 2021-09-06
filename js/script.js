@@ -1,27 +1,18 @@
-//setting up openweather APIKey and url
+//setting up openweather APIKey and url and elements to display data
 
 var APIKey = "329a430c78a8cebf9c6c895dedfc7209";
-var cityEl = document.querySelector("#cityName"); //need to change this to get val from user input on search bar
+var cityEl = document.querySelector("#cityName").value;
 var searchButton = document.querySelector("#button-addon2");
 var tempEl = document.querySelector("#currentTemp");
 var city = [];
-//need to get user input to add to url data
+//need to get user input to add to url data and get weather info
 
-var getUserInput = function (event) {
-  event.preventDefault();
-  var cityInput = cityEl.value.trim();
-  if (cityInput) {
-    getWeather(cityInput);
-    city.unshift({ cityInput });
-    cityEl.value = "";
-  }
-};
 
 function getWeather() {
   //using url link to get weather data
   var queryUrl =
     "http://api.openweathermap.org/data/2.5/weather?q=" +
-    city +
+    cityEl +
     "&appid=" +
     APIKey;
 
