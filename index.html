@@ -33,6 +33,8 @@
           class="form-control"
           placeholder="Search for City Here!"
           aria-label="Search Bar"
+          id="cityInput"
+          
         />
         <button
           class="col-12 btn btn-outline-primary"
@@ -45,9 +47,10 @@
       </div>
       <!-- Section to display current weather -->
       <section class="col-12 col-md-9">
-        <div class="row border citySearch" id="current-weather"></div>
-        <div class="col-12" id="currentWeather" class="list-group">
-          <h1 id="cityInput"></h1>
+        <h1 id="cityName"></h1>
+        <div class="row border " id="currentTemp"></div>
+        <div class="col-12" id="weatherDetails" class="list-group">
+          
         </div>
       </section>
       <!-- Section to display searched cities -->
