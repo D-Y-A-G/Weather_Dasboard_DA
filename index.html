@@ -33,7 +33,7 @@
             type="text"
             class="form-control"
             placeholder="Search for City Here!"
-            aria-label="Search Bar"
+            autofocus="true"
             id="cityInput"
           />
           <button
@@ -46,10 +46,12 @@
           </button>
         </div>
         <!-- Section to display current weather -->
-        <section class="row col-12 col-md-9 border">
+        <section class="row col-12 col-md-9 border" id="data-info">
           <h3 id=" row cityName">CityName Here</h3>
-          <div class="row col-12" id="currentTemp"></div>
-          <div class="row col-12" id="weatherDetails" class="list-group"></div>
+          <div class="row col-12" id="currentTemp">curren temp here</div>
+          <div class="row col-12" id="weatherDetails" class="list-group">
+            other data
+          </div>
         </section>
         <!-- Section to display searched cities -->
 
@@ -67,7 +69,7 @@
       integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
       crossorigin="anonymous"
     ></script>
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

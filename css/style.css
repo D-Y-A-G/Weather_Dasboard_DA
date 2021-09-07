@@ -1,6 +1,7 @@
 * {
   font-family: "Raleway", sans-serif;
   margin-left: 5px;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -20,4 +21,10 @@ h1 {
   padding-right: 0;
   font-weight: bolder;
   background-color: orange;
+}
+
+#data-info {
+  align-items: center;
+  text-align: center;
+  display: flex;
 }

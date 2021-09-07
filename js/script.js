@@ -1,18 +1,19 @@
 //setting up openweather APIKey and url and elements to display data
 
 var APIKey = "329a430c78a8cebf9c6c895dedfc7209";
-var cityEl = document.querySelector("#cityName").value;
+var cityEl = document.querySelector("#cityInput");
 var searchButton = document.querySelector("#button-addon2");
 var tempEl = document.querySelector("#currentTemp");
 var city = [];
 //need to get user input to add to url data and get weather info
 
-
 function getWeather() {
+  
   //using url link to get weather data
   var queryUrl =
-    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    "http://api.openweathermap.org/data/2.5/weather?q=" + // need to use oncall api lat and long
     cityEl +
+    "&units=imperial" +
     "&appid=" +
     APIKey;
 
@@ -22,7 +23,7 @@ function getWeather() {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      console.log(data); // .main to get temp
 
       //for (var i = 0; i < data.length; i++){
       //var showCity = document.createElement("div");
