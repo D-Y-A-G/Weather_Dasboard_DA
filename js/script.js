@@ -1,18 +1,37 @@
 //setting up openweather APIKey and url and elements to display data
 
 var APIKey = "329a430c78a8cebf9c6c895dedfc7209";
-var cityEl = document.querySelector("#cityInput");
 var searchButton = document.querySelector("#button-addon2");
 var tempEl = document.querySelector("#currentTemp");
 var city = [];
 //need to get user input to add to url data and get weather info
 
-function getWeather() {
-  
-  //using url link to get weather data
+function handleSearcBtn(event) {
+  event.preventDefault();
+
+  var citySearchInput = document.querySelector("#cityInput").value;
+
+  if (!citySearchInput) {
+    console.error("You need to type a city name");
+    return;
+  }
+
   var queryUrl =
     "http://api.openweathermap.org/data/2.5/weather?q=" + // need to use oncall api lat and long
-    cityEl +
+    citySearchInput +
+    "&units=imperial" +
+    "&appid=" +
+    APIKey;
+
+  location.assign(queryUrl);
+}
+
+function getWeather() {
+  //using url link to get weather data
+
+  var queryUrl =
+    "http://api.openweathermap.org/data/2.5/weather?q=" + // need to use oncall api lat and long
+    citySearchInput +
     "&units=imperial" +
     "&appid=" +
     APIKey;
@@ -29,11 +48,11 @@ function getWeather() {
       //var showCity = document.createElement("div");
       //showCity.textContent = data[i].main;
 
-      // }
+      //}
     });
 }
 
-searchButton.addEventListener("click", getWeather);
+searchButton.addEventListener("click", handleSearcBtn);
 
 //User inputs the name of the city that they would like to check current weather
 
