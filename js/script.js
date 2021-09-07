@@ -6,29 +6,27 @@ var tempEl = document.querySelector("#currentTemp");
 var city = [];
 //need to get user input to add to url data and get weather info
 
-function handleSearcBtn(event) {
-  event.preventDefault();
+// function handleSearchBtn(event) {
+//   event.preventDefault();
 
-  var citySearchInput = document.querySelector("#cityInput").value;
+//   if (!citySearchInput) {
+//     console.error("You need to type a city name");
+//     return;
+//   }
 
-  if (!citySearchInput) {
-    console.error("You need to type a city name");
-    return;
-  }
+//   var queryUrl =
+//     "http://api.openweathermap.org/data/2.5/weather?q=" +
+//     citySearchInput +
+//     "&units=imperial" +
+//     "&appid=" +
+//     APIKey;
 
-  var queryUrl =
-    "http://api.openweathermap.org/data/2.5/weather?q=" + // need to use oncall api lat and long
-    citySearchInput +
-    "&units=imperial" +
-    "&appid=" +
-    APIKey;
-
-  location.assign(queryUrl);
-}
+//   location.assign(queryUrl);
+// }
 
 function getWeather() {
   //using url link to get weather data
-
+  var citySearchInput = document.querySelector("#cityInput").value;
   var queryUrl =
     "http://api.openweathermap.org/data/2.5/weather?q=" + // need to use oncall api lat and long
     citySearchInput +
@@ -52,7 +50,7 @@ function getWeather() {
     });
 }
 
-searchButton.addEventListener("click", handleSearcBtn);
+searchButton.addEventListener("click", getWeather);
 
 //User inputs the name of the city that they would like to check current weather
 
