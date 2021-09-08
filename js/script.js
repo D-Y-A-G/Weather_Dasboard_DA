@@ -69,47 +69,47 @@ function getWeather() {
 
           ///////////////////////Day 1//////////////////////////////////////////////
 
-          var showTemp1 = document.querySelector("#day1");
-          showTemp1.textContent =
-            "Current Temperature: " + data.main.temp + " °F";
-
           var showDate1 = document.querySelector("#day1");
-          showDate1.textContent = data.name + today;
+          showDate1.textContent = today;
 
-          var wind1 = document.querySelector("#day1");
-          wind1.textContent = "Wind: " + data.wind.speed + " Mph";
+          var showTemp1 = document.querySelector("#currentTemp1");
+          showTemp1.textContent =
+            "Current Temperature: " + data.daily[0].temp.day + " °F";
 
-          var humidity1 = document.querySelector("#day1");
-          humidity1.textContent = "Humidity: " + data.main.humidity;
+          var wind1 = document.querySelector("#wind1");
+          wind1.textContent = "Wind: " + data.daily[0].wind_speed + " Mph";
+
+          var humidity1 = document.querySelector("#humidity1");
+          humidity1.textContent = "Humidity: " + data.daily[0].humidity;
 
           //////////////////////////Day 2//////////////////////////////////////////
 
-          var showTemp2 = document.querySelector("#currentTemp");
-          showTemp2.textContent =
-            "Current Temperature: " + data.main.temp + " °F";
+           //var showTemp2 = document.querySelector("#currentTemp");
+          // showTemp2.textContent =
+          //   "Current Temperature: " + data.main.temp + " °F";
 
-          var showDate2 = document.querySelector("#cityName");
-          showDate2.textContent = data.name + today;
+          // var showDate2 = document.querySelector("#cityName");
+          // showDate2.textContent = data.name + today;
 
-          var wind2 = document.querySelector("#windSpeed");
-          wind2.textContent = "Wind: " + data.wind.speed + " Mph";
+          // var wind2 = document.querySelector("#windSpeed");
+          // wind2.textContent = "Wind: " + data.wind.speed + " Mph";
 
-          var humidity2 = document.querySelector("#humidity");
-          humidity2.textContent = "Humidity: " + data.main.humidity;
-          //////////////////////////Day 3//////////////////////////////////////////
+          // var humidity2 = document.querySelector("#humidity");
+          // humidity2.textContent = "Humidity: " + data.main.humidity;
+          // //////////////////////////Day 3//////////////////////////////////////////
 
-          var showTemp1 = document.querySelector("#currentTemp");
-          showTemp1.textContent =
-            "Current Temperature: " + data.main.temp + " °F";
+          // var showTemp1 = document.querySelector("#currentTemp");
+          // showTemp1.textContent =
+          //   "Current Temperature: " + data.main.temp + " °F";
 
-          var showDate1 = document.querySelector("#cityName");
-          showDate1.textContent = data.name + today;
+          // var showDate1 = document.querySelector("#cityName");
+          // showDate1.textContent = data.name + today;
 
-          var wind1 = document.querySelector("#windSpeed");
-          wind1.textContent = "Wind: " + data.wind.speed + " Mph";
+          // var wind1 = document.querySelector("#windSpeed");
+          // wind1.textContent = "Wind: " + data.wind.speed + " Mph";
 
-          var humidity1 = document.querySelector("#humidity");
-          humidity1.textContent = "Humidity: " + data.main.humidity;
+          // var humidity1 = document.querySelector("#humidity");
+          // humidity1.textContent = "Humidity: " + data.main.humidity;
         });
     });
 }
