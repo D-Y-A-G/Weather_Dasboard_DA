@@ -42,11 +42,17 @@ function getWeather() {
     .then(function (data) {
       console.log(data); // .main to get temp
 
-      //for (var i = 0; i < data.length; i++){
-      //var showCity = document.createElement("div");
-      //showCity.textContent = data[i].main;
+      var showCity = document.querySelector("#currentTemp");
+      showCity.textContent = "TEMP: " + data.main.temp + " °F"; //alt 0176 for degree
 
-      //}
+      var cityName = document.querySelector("#cityName");
+      cityName.textContent = data.name;
+
+      var currentWind = document.querySelector("#weatherDetails");
+      currentWind.textContent = "Wind: " + data.wind.speed + " MPH";
+
+      var latLong = data.coord.lat;
+      console.log(latLong);
     });
 }
 
