@@ -32,7 +32,7 @@ function getWeather() {
   //using url link to get weather data
   var citySearchInput = document.querySelector("#cityInput").value;
   var queryUrl =
-    "http://api.openweathermap.org/data/2.5/weather?q=" + // need to use oncall api lat and long
+    "https://api.openweathermap.org/data/2.5/weather?q=" + // need to use oncall api lat and long
     citySearchInput +
     "&units=imperial" +
     "&appid=" +
@@ -73,9 +73,7 @@ function getWeather() {
 
 ////////// 5 day Forecast /////////////////////
 
-function fiveDayForecast (){
-  
-}
+function fiveDayForecast() {}
 
 searchButton.addEventListener("click", getWeather);
 
