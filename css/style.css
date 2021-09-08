@@ -23,7 +23,7 @@ h1 {
   background-color: orange;
 }
 
-#data-info {
+h3 #cityname {
   align-items: center;
   text-align: center;
   display: flex;

@@ -3,7 +3,11 @@
 var APIKey = "329a430c78a8cebf9c6c895dedfc7209";
 var searchButton = document.querySelector("#button-addon2");
 var tempEl = document.querySelector("#currentTemp");
-var city = [];
+
+//Displaying today's date
+
+var today = moment().format("  dddd, MMMM, Do YYYY ");
+
 //need to get user input to add to url data and get weather info
 
 // function handleSearchBtn(event) {
@@ -43,17 +47,34 @@ function getWeather() {
       console.log(data); // .main to get temp
 
       var showCity = document.querySelector("#currentTemp");
-      showCity.textContent = "TEMP: " + data.main.temp + " °F"; //alt 0176 for degree
+      showCity.textContent = "Current Temperature: " + data.main.temp + " °F"; //alt 0176 for degree
 
       var cityName = document.querySelector("#cityName");
-      cityName.textContent = data.name;
+      cityName.textContent = data.name + today; // need to add icon
 
-      var currentWind = document.querySelector("#weatherDetails");
-      currentWind.textContent = "Wind: " + data.wind.speed + " MPH";
+      var currentWind = document.querySelector("#windSpeed");
+      currentWind.textContent = "Wind: " + data.wind.speed + " Mph";
 
-      var latLong = data.coord.lat;
-      console.log(latLong);
+      var humidityLevel = document.querySelector("#humidity");
+      humidityLevel.textContent = "Humidity: " + data.main.humidity;
+
+      var clouds = document.querySelector("#clouds");
+      clouds.textContent = "Clouds: " + data.clouds.all;
+
+      //////getting latitude and longitude/////////
+
+      var latitude = data.coord.lat;
+      console.log(latitude);
+
+      var longitude = data.coord.lon;
+      console.log(longitude);
     });
+}
+
+////////// 5 day Forecast /////////////////////
+
+function fiveDayForecast (){
+  
 }
 
 searchButton.addEventListener("click", getWeather);
