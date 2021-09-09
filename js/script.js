@@ -140,18 +140,10 @@ function getWeather() {
     });
 }
 
-var fiveDayForecast = function (onecall) {
-  var citySearchInput = document.querySelector("#cityInput").value;
-
-  fetch(oneCallUrl);
-};
-
 // var citiesSearched = function () {
 //   localStorage.setItem("pastCities", JSON.stringify(pastCities));
 // };
 
 searchButton.addEventListener("click", getWeather);
 
-//User inputs the name of the city that they would like to check current weather
 
-//User clicks search and is presented with current weather for city searched
