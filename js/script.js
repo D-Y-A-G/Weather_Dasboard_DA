@@ -43,7 +43,7 @@ function getWeather() {
       var humidityLevel = document.querySelector("#humidity");
       humidityLevel.textContent = "Humidity: " + data.main.humidity;
 
-      //////getting latitude and longitude/////////
+      //////checking for latitude and longitude vakue/////////
 
       var latitude = data.coord.lat;
       console.log(latitude);
@@ -173,8 +173,20 @@ function getStoredCity() {
   if (storedCityInput !== null) {
     pastCities = storedCityInput;
   }
+
+  displaySearchedCities();
 }
 
-displaySearchedCities();
-
 searchButton.addEventListener("click", getWeather);
+
+searchedCities.addEventListener("click", function (event) {
+  var element = event.target;
+
+  if (element.matches("button") === true) {
+    var index = element.parentElment.getAttribute("data-index");
+
+    pastCities.splice(index, 1);
+  }
+});
+
+getStoredCity();
