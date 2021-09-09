@@ -3,6 +3,7 @@
 var APIKey = "329a430c78a8cebf9c6c895dedfc7209";
 var searchButton = document.querySelector("#button-addon2");
 var tempEl = document.querySelector("#currentTemp");
+
 var pastCities = [];
 //Displaying today's date
 

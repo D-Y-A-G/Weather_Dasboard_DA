@@ -14,17 +14,21 @@ h1 {
   color: whitesmoke;
 }
 
-.input-group {
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding-right: 0;
-  font-weight: bolder;
-  background-color: orange;
+#cityLookup,
+#forecast,
+#cityName {
+  display: flex;
+  color: navy;
+  padding: 10px;
+  border: 2px 2px solid;
+  text-shadow: 1px 1px dodgerblue;
 }
 
-h3 #cityname {
-  align-items: center;
-  text-align: center;
-  display: flex;
+#futureForecast {
+  background-color: royalblue;
+  color: aliceblue;
+  text-shadow: 2px 2px darkblue;
+  border: 2px solid darkblue;
+  padding: 20px;
+  box-shadow: 10px 10px darkblue;
 }

@@ -27,7 +27,7 @@
     <main>
       <div class="row">
         <!-- Search bar with input -->
-        <h3>Search for a City:</h3>
+        <h4 id="cityLookup">Search for a City:</h4>
         <div class="col-12 col-md-3">
           <input
             type="text"
@@ -47,39 +47,41 @@
         </div>
         <!-- Section to display current weather -->
         <section class="row col-12 col-md-9 border" id="data-info">
-          <h3 id="cityName" class="row">Check current Weather Data</h3>
-          <div class="row col-12" id="currentTemp"></div>
-          <div class="row col-12" id="windSpeed"></div>
-          <div class="row col-12" id="humidity"></div>
-          <div class="row col-12" id="uvIdx"></div>
-
+          <h3 id="cityName">Check Current Weather!</h3>
+          <section id="currentForecast">
+            <div class="row col-12" id="currentTemp"></div>
+            <div class="row col-12" id="windSpeed"></div>
+            <div class="row col-12" id="humidity"></div>
+            <div class="row col-12" id="uvIdx"></div>
+          </section>
+          <h3 id="forecast">Five Day Forecast:</h3>
           <div id="latLong"></div>
           <div id="fiveDay" class="row border-top">
-            <div class="col-2">
+            <div class="row col-2" id="futureForecast">
               <div id="day1"></div>
               <div id="currentTemp1"></div>
               <div id="wind1"></div>
               <div id="humidity1"></div>
             </div>
-            <div class="row col-2">
+            <div class="row col-2" id="futureForecast">
               <div id="day2"></div>
               <div id="currentTemp2"></div>
               <div id="wind2"></div>
               <div id="humidity2"></div>
             </div>
-            <div class="row col-2">
+            <div class="row col-2" id="futureForecast">
               <div id="day3"></div>
               <div id="currentTemp3"></div>
               <div id="wind3"></div>
               <div id="humidity3"></div>
             </div>
-            <div class="row col-2">
+            <div class="row col-2" id="futureForecast">
               <div id="day4"></div>
               <div id="currentTemp4"></div>
               <div id="wind4"></div>
               <div id="humidity4"></div>
             </div>
-            <div class="row col-2">
+            <div class="row col-2" id="futureForecast">
               <div id="day5"></div>
               <div id="currentTemp5"></div>
               <div id="wind5"></div>
@@ -87,7 +89,7 @@
             </div>
           </div>
         </section>
-        <div class="col-12 col-md-3" id="searchedCities">input check</div>
+        <div class="col-12 col-md-3" id="searchedCities"></div>
         <!-- Section to display searched cities -->
       </div>
 
