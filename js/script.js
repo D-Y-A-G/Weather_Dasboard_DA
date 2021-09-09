@@ -5,6 +5,8 @@ var searchButton = document.querySelector("#button-addon2");
 var tempEl = document.querySelector("#currentTemp");
 
 var pastCities = [];
+var searchedCities = document.querySelector("#searched-cities");
+
 //Displaying today's date
 
 var today = moment().format("  (MMMM, Do YYYY) ");
@@ -140,10 +142,39 @@ function getWeather() {
     });
 }
 
-// var citiesSearched = function () {
-//   localStorage.setItem("pastCities", JSON.stringify(pastCities));
-// };
+///////////Display previous searched cities///////////////////
+
+function displaySearchedCities() {
+  searchedCities.innerHTML = "";
+  searchedCities.textContent = pastCities.length;
+
+  for (var i = 0; i < pastCities.length; i++) {
+    var listCities = searchedCities[i];
+
+    var li = document.createElement("li");
+    li.textContent = listCities;
+    li.setAttribute("data-index", i);
+
+    listCities.appendChild(li);
+  }
+}
+
+/////////////trying to store city searched in local storage with set item///////////
+
+function storeCities() {
+  localStorage.setItem("pastCities", JSON.stringify(pastCities));
+}
+
+//////////////////////// get item ///////////////////////////////
+
+function getStoredCity() {
+  var storedCityInput = JSON.parse(localStorage.getItem("pastCities"));
+
+  if (storedCityInput !== null) {
+    pastCities = storedCityInput;
+  }
+}
+
+displaySearchedCities();
 
 searchButton.addEventListener("click", getWeather);
-
-
